@@ -182,19 +182,19 @@
 
             <form id="contact-form">
                 <label>Name</label>
-                <input type="text" name="Name" class="input-feild">
+                <input type="text" name="Name" id="name" class="input-feild">
 
                 <label>Subject</label>
-                <input type="text" name="Subject" class="input-feild">
+                <input type="text" name="Subject" id="subject" class="input-feild">
 
                 <label>Email</label>
-                <input type="email" name="Email" class="input-feild">
+                <input type="email" name="Email" id="email" class="input-feild">
 
                 <label>Message</label>
-                <textarea name="message" class="input-feild"></textarea>
+                <textarea name="message" id="message" class="input-feild"></textarea>
                 
 
-                <input type="button" value="Send" id="submit-btn">
+                <input type="submit" onclick="sendMail()" value="Send" id="submit-btn">
         </form>
         </div>   
     </section>
@@ -202,5 +202,14 @@
 
 
     <script src="index.js"></script>
+    <script 
+      type="text/javascript" 
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" 
+    ></script> 
+    <script type="text/javascript"> 
+      (function () { 
+        emailjs.init("HecCckLhzcyhLtCYd"); 
+      })(); 
+    </script>
 </body>
 </html>
