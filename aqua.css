@@ -1,7 +1,7 @@
 
 :root {
     --mainColor: aqua;
-    --secondaryColor:rgb(24, 37, 109);
+    --secondaryColor:rgb(0, 178, 178);
 
     --borderColor:#c1c1c1;
 
@@ -10,8 +10,8 @@
 
     --themeDotBorder: #fff;
 
-    --previewBg: rgb(24, 37, 109);
-    --previewShadow: rgb(61, 163, 223);
+    --previewBg: rgb(0, 178, 178);
+    --previewShadow: rgb(0, 216, 216);
 
-    --btnColor: rgb(60, 68, 182);
+    --btnColor: rgb(0, 216, 216);
 }
