@@ -1,39 +1,40 @@
+let theme = localStorage.getItem('theme');
 
-let theme = localStorage.getItem('theme')
-
-if (theme == null){
-    setTheme('light')
-}else{
-    setTheme(theme)
+if (theme === null) {
+    setTheme('light');
+} else {
+    setTheme(theme);
 }
 
+let themeDot = document.getElementsByClassName('theme-dot');
 
-let themeDot = document.getElementsByClassName('theme-dot')
-
-for (var i = 0; themeDot.lenght > i; i++){
-    themeDot[i].addEventListener('click', function(){
-        let mode = this.dataset.mode
-        console.log('obtion clicked:', mode)
-        setTheme(mode)
-        
-    })
+for (let i = 0; i < themeDot.length; i++) {
+    themeDot[i].addEventListener('click', function() {
+        let mode = this.dataset.mode;
+        console.log('option clicked:', mode);
+        setTheme(mode);
+    });
 }
 
 function setTheme(mode) {
-    if(mode == 'light'){
-        document.getElementById('theme-style').href = 'style.css'
-    }
-    if(mode == 'aqua'){
-        document.getElementById('theme-style').href = 'aqua.css'
-    }
-    if(mode == 'green'){
-        document.getElementById('theme-style').href = 'green.css'
-    }
-    if(mode == 'purple'){
-        document.getElementById('theme-style').href = 'purple.css'
+    let themeStyle = document.getElementById('theme-style');
+
+    switch (mode) {
+        case 'light':
+            themeStyle.href = 'style.css';
+            break;
+        case 'aqua':
+            themeStyle.href = 'aqua.css';
+            break;
+        case 'green':
+            themeStyle.href = 'green.css';
+            break;
+        case 'purple':
+            themeStyle.href = 'purple.css';
+            break;
+        default:
+            themeStyle.href = 'style.css';
     }
 
-    localStorage.setItem('theme', mode)
+    localStorage.setItem('theme', mode);
 }
-
-console.log('man - tire');
